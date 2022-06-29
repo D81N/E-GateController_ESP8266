@@ -52,8 +52,8 @@
 #define CLOSE_R_PIN                     D0
 #define OPEN_R_PIN                      D8
 
-const char *ssid =      "e-Gate Controller";
-const char *password =  "ESP8266eGateController";
+const char *ssid =      "ur wi-fi name";
+const char *password =  "password";
 
 ESP8266WebServer server(80);
 MFRC522 mfrc522(SDA_PIN, RST_PIN);
