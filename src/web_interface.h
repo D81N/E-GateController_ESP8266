@@ -69,7 +69,7 @@ const String HTML = R"=====(
 <body>
     <div>
         <a href=\><button class="button0"><h1>e-GATE <br> CONTROLLER</h1></button></a>
-        <a href=\ClosAllGates><button class="button1"><h1>CLOSE</h1></button></a>
+        <a href=\CloseAllGates><button class="button1"><h1>CLOSE</h1></button></a>
         <a href=\OpenAllGates><button class="button2"><h1>OPEN</h1></button></a>
         <a href=\StopAllGates><button class="button3"><h1>STOP</h1></button></a>
         <a href=\OpenCloseSingleGate><button class="button4"><h1>OPEN / CLOSE Single Gate</h1></button></a>
