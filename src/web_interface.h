@@ -1,3 +1,5 @@
+#include <Arduino.h>
+
 const String HTML = R"=====(
 <html lang="en">
 <head>
