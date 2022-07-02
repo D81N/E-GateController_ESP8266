@@ -4,9 +4,9 @@
 //     +----------------------------------+     \\
 //     | ######### |   LEFT   |   RIGHT   |     \\
 //     |----------------------------------|     \\
-//     |   CLOSE   |   D1  O  |   D0  P   |     \\
+//     |   CLOSE   |   D3  O  |   D2  P   |     \\
 //     |----------------------------------|     \\
-//     |   OPEN    |   D2  Y  |   D8  B   |     \\
+//     |   OPEN    |   D1  Y  |   D0  B   |     \\
 //     +----------------------------------+     \\
 //==============================================\\
 
@@ -25,8 +25,8 @@
 #define CLOSE_R_PIN                     D2
 #define CLOSE_L_PIN                     D3
 
-const char *ssid =      "E-GateController";
-const char *password =  "eGateController";
+const char *ssid =      "ur AP ssid";
+const char *password =  "pass";
 
 ESP8266WebServer server(80);
 
