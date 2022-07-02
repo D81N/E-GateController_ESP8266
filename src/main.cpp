@@ -19,20 +19,21 @@
 
 #define INTERVAL_BETWEEN_GATES          1000
 
-#define CLOSE_L_PIN                     D1
-#define OPEN_L_PIN                      D2
-#define CLOSE_R_PIN                     D0
-#define OPEN_R_PIN                      D8
+
+#define OPEN_R_PIN                      D0
+#define OPEN_L_PIN                      D1
+#define CLOSE_R_PIN                     D2
+#define CLOSE_L_PIN                     D3
 
 const char *ssid =      "E-GateController";
 const char *password =  "eGateController";
 
 ESP8266WebServer server(80);
 
-bool isOpeningL = LOW;
-bool isClosingL = LOW;
-bool isOpeningR = LOW;
-bool isClosingR = LOW;
+bool isOpeningL =        LOW;
+bool isClosingL =        LOW;
+bool isOpeningR =        LOW;
+bool isClosingR =        LOW;
 bool single_gate_state = LOW;
 
 void response();
@@ -69,6 +70,10 @@ void loop() {
     server.handleClient();
 }
 
+
+void response(){
+    server.send(200, "text/html", HTML);
+}
 
 void close_gates() {
     delay(2);
@@ -143,8 +148,4 @@ void open_close_single_gate(){
     }
 
     response();
-}
-
-void response(){
-    server.send(200, "text/html", HTML);
 }
