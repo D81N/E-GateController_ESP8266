@@ -22,8 +22,8 @@
 #define CLOSE_R_PIN                     D2
 #define CLOSE_L_PIN                     D3
 
-const char *ssid =      "SSID";
-const char *password =  "PASS";
+const char *ssid =      "E-GateController";
+const char *password =  "eGateController";
 
 ESP8266WebServer server(80);
 
@@ -81,6 +81,7 @@ void close_gates() {
         delay(INTERVAL_BETWEEN_GATES);
         digitalWrite(CLOSE_R_PIN, isClosingR);
     }
+
     response();
     delay(2);
 }
