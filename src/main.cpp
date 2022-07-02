@@ -10,23 +10,20 @@
 //     +----------------------------------+     \\
 //==============================================\\
 
-
-#include "web_interface.h"
 #include <ESP8266WiFi.h>
 #include <WiFiClient.h>
 #include <ESP8266WebServer.h>
-
+#include "web_interface.h"
 
 #define INTERVAL_BETWEEN_GATES          1000
-
 
 #define OPEN_R_PIN                      D0
 #define OPEN_L_PIN                      D1
 #define CLOSE_R_PIN                     D2
 #define CLOSE_L_PIN                     D3
 
-const char *ssid =      "ur AP ssid";
-const char *password =  "pass";
+const char *ssid =      "SSID";
+const char *password =  "PASS";
 
 ESP8266WebServer server(80);
 
@@ -56,7 +53,7 @@ void setup() {
     Serial.println("\t\te-Gate Controller");
 
     WiFi.softAP(ssid, password);
-    IPAddress apip = WiFi.softAPIP();
+    IPAddress softAP = WiFi.softAPIP();
 
     server.on("/", response);
     server.on("/CloseAllGates", close_gates);
